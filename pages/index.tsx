@@ -72,6 +72,7 @@ export default function Home() {
             cardValue={elem.rank} cardSuit={elem.suit}
             isHidden={false}
             isValid={true}
+            onClick={() => HandlePyramidCardClick(idx)}
           />
         )}
     </div>
@@ -83,6 +84,7 @@ export default function Home() {
             cardValue={elem.rank} cardSuit={elem.suit}
             isHidden={false}
             isValid={true}
+            onClick={() => HandlePyramidCardClick(idx + 3)}
           />
         )}
     </div>
@@ -94,6 +96,7 @@ export default function Home() {
             cardValue={elem.rank} cardSuit={elem.suit}
             isHidden={false}
             isValid={true}
+            onClick={() => HandlePyramidCardClick(idx + 9)}
           />
         )}
     </div>
@@ -105,6 +108,7 @@ export default function Home() {
             cardValue={elem.rank} cardSuit={elem.suit}
             isHidden={false}
             isValid={true}
+            onClick={() => HandlePyramidCardClick(idx + 18)}
           />
         )}
     </div>
@@ -121,6 +125,11 @@ export default function Home() {
   const HandleOnCardClick = (card?: CardInfo) => {
     console.log('Card clicked.', card)
   }
+
+  const HandlePyramidCardClick = (idx: number) => {
+    console.log('Card clicked.', idx, slots[idx])
+  }
+
 
 
   return (
